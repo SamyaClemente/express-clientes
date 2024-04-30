@@ -17,7 +17,9 @@
   "author": "Márcio Bueno <marcio.bueno@unicap.br> (https://marciobueno.com/)",
   "license": "MIT",
   "devDependencies": {
+"devDependencies": {
     "@babel/core": "^7.24.0",
+    "@babel/cli": "^7.24.0",
     "@babel/node": "^7.23.9",
     "@babel/preset-env": "^7.24.0",
     "nodemon": "^3.1.0"
