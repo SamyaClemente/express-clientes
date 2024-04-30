@@ -3,9 +3,15 @@ FROM node:20
 # Create app directory
 WORKDIR /app
 
-COPY . /app
+# Copy package.json and package-lock.json first
+COPY package*.json ./
 
+# Install dependencies
 RUN npm install
+
+# Copy the rest of the application
+COPY . .
+
 # If you are building your code for production
 # RUN npm ci --omit=dev
 
