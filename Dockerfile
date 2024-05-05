@@ -1,21 +1,14 @@
-# Use a imagem oficial do Node.js versão 20
 FROM node:20
 
-# Define o diretório de trabalho
+# Create app directory
 WORKDIR /app
 
-# Copia os arquivos de dependências e instala as dependências
-
-RUN npm install
-
-# Copia o restante dos arquivos do projeto para o diretório de trabalho
 COPY . /app
 
-# Define a variável de ambiente para a porta 8080
-ENV PORT=8080
+RUN npm install
+# If you are building your code for production
+# RUN npm ci --omit=dev
 
-# Exponha a porta 8080
+ENV PORT 8080
 EXPOSE 8080
-
-# Define o comando padrão para iniciar o aplicativo
-CMD ["npm", "start"]
+CMD [ "npm", "start" ]
