@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Copia os arquivos de dependências e instala as dependências
 
-RUN npm ci --omit=dev
+RUN npm ci 
 
 # Copia o restante dos arquivos do projeto para o diretório de trabalho
 COPY . /app
