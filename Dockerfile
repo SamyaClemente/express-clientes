@@ -1,23 +1,14 @@
 FROM node:20
 
-# Crie o diretório do app
+# Create app directory
 WORKDIR /app
 
-# Copie os arquivos de dependências
-COPY package*.json ./
+COPY . /app
 
-# Instale as dependências
 RUN npm install
+# If you are building your code for production
+# RUN npm ci --omit=dev
 
-# Copie o resto da aplicação
-COPY . .
-
-# Transpile o código com Babel
-RUN npm run build
-
-# Defina a porta
-ENV PORT=8080
+ENV PORT 8080
 EXPOSE 8080
-
-# Inicie a aplicação em produção
-CMD [ "npm", "run", "start:prod" ]
+CMD [ "npm", "start" ]
