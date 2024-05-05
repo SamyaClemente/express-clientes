@@ -2,32 +2,38 @@
 
 Este é um projeto de gerenciamento de candidatos que permite o cadastro, atualização, remoção e visualização de candidatos, experiências profissionais, educações e habilidades associadas. As rotas estão documentadas abaixo com exemplos de JSON de entrada.
 
+## URL base da API
+
+As rotas da API estão disponíveis em: [https://express-clientes.onrender.com/api](https://express-clientes.onrender.com/api)
+
+Todos os endpoints abaixo devem ser acessados com o prefixo `/api`, por exemplo, para acessar a rota `/candidatos`, você deve usar a URL `https://express-clientes.onrender.com/api/candidatos`.
+
 ## Rotas
 
-### POST `/candidatos`
+### POST `/api/candidatos`
 
 Adiciona um novo candidato ao banco de dados.
 
 - **Entrada**: Um objeto JSON com as seguintes propriedades:
   - `nome` (string): Nome do candidato.
-    - `email` (string): Email do candidato.
-    - `telefone` (string): Telefone do candidato.
-    - `endereco` (string): Endereço do candidato.
-    - `data_nascimento` (string): Data de nascimento do candidato.
+  - `email` (string): Email do candidato.
+  - `telefone` (string): Telefone do candidato.
+  - `endereco` (string): Endereço do candidato.
+  - `data_nascimento` (string): Data de nascimento do candidato.
 
-### GET `/candidatos/:id`
+### GET `/api/candidatos/:id`
 
 Retorna as informações de um candidato específico com base em seu ID.
 
-### PUT `/candidatos/:id`
+### PUT `/api/candidatos/:id`
 
 Atualiza as informações de um candidato específico com base em seu ID.
 
-### DELETE `/candidatos/:id`
+### DELETE `/api/candidatos/:id`
 
 Remove um candidato específico com base em seu ID.
 
-### POST `/experiencias-profissionais`
+### POST `/api/experiencias-profissionais`
 
 Adiciona uma nova experiência profissional para um candidato.
 
@@ -39,11 +45,11 @@ Adiciona uma nova experiência profissional para um candidato.
   - `data_fim` (string, opcional): Data de fim da experiência profissional.
   - `descricao` (string): Descrição da experiência profissional.
 
-### GET `/experiencias-profissionais/:candidato_id`
+### GET `/api/experiencias-profissionais/:candidato_id`
 
 Retorna as experiências profissionais associadas a um candidato específico com base em seu ID.
 
-### POST `/educacoes`
+### POST `/api/educacoes`
 
 Adiciona uma nova educação para um candidato.
 
@@ -56,11 +62,11 @@ Adiciona uma nova educação para um candidato.
   - `data_conclusao` (string, opcional): Data de conclusão do curso.
   - `descricao` (string, opcional): Descrição da educação.
 
-### GET `/educacoes/:candidato_id`
+### GET `/api/educacoes/:candidato_id`
 
 Retorna as educações associadas a um candidato específico com base em seu ID.
 
-### POST `/habilidades`
+### POST `/api/habilidades`
 
 Adiciona uma nova habilidade para um candidato.
 
@@ -68,7 +74,7 @@ Adiciona uma nova habilidade para um candidato.
   - `candidato_id` (int): ID do candidato.
   - `habilidade` (string): Habilidade do candidato.
 
-### GET `/habilidades/:candidato_id`
+### GET `/api/habilidades/:candidato_id`
 
 Retorna as habilidades associadas a um candidato específico com base em seu ID.
 
