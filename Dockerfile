@@ -5,7 +5,7 @@ FROM node:20
 WORKDIR /app
 
 # Copia os arquivos de dependências e instala as dependências
-COPY package*.json /app/
+
 RUN npm ci --omit=dev
 
 # Copia o restante dos arquivos do projeto para o diretório de trabalho
