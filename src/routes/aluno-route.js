@@ -1,9 +1,9 @@
 const express = require('express');
 const pool = require('../db');
-const Aluno = require('../models/Aluno');
-const Endereco = require('../models/Endereco');
-const Curso = require('../models/Curso');
-const Matricula = require('../models/Matricula');
+const Aluno = require('../models/aluno');
+const Endereco = require('../models/endereco');
+const Curso = require('../models/curso');
+const Matricula = require('../models/matricula');
 
 const router = express.Router();
 
