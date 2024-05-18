@@ -86,8 +86,6 @@ console.log('Salvando habilidades:', habilidades);
   }
 });
 
-
-
 router.get('/candidatos', async (req, res) => {
   try {
     // Consulta ao banco de dados para obter a lista de candidatos com informações relacionadas
