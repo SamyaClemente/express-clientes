@@ -1,14 +1,21 @@
 FROM node:20
 
-# Create app directory
+# Define a variável de ambiente para a porta
+ENV PORT 8080
+
+# Define o diretório de trabalho dentro do contêiner
 WORKDIR /app
 
+# Copia o conteúdo do diretório atual para o diretório de trabalho no contêiner
 COPY . /app
 
-RUN npm install
-# If you are building your code for production
-# RUN npm ci --omit=dev
+# Limpa o cache do npm, remove a pasta node_modules e instala as dependências de produção
+RUN npm cache clean --force \
+    && rm -rf node_modules \
+    && npm install --only=production
 
-ENV PORT 8080
+# Expõe a porta 8080 do contêiner
 EXPOSE 8080
+
+# Comando para iniciar a aplicação quando o contêiner for iniciado
 CMD [ "npm", "start" ]
