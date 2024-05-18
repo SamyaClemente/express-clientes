@@ -1,7 +1,7 @@
 
 const express = require('express');
 const pool = require('../db');
-const Endereco = require('../models/Endereco');
+const Endereco = require('../models/endereco');
 
 const router = express.Router();
 

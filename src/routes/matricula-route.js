@@ -1,6 +1,6 @@
 const express = require('express');
 const pool = require('../db');
-const Matricula = require('../models/Matricula');
+const Matricula = require('../models/matricula');
 
 const router = express.Router();
 
