@@ -1,6 +1,6 @@
 const express = require('express');
 const pool = require('../db');
-const Curso = require('../models/Curso');
+const Curso = require('../models/curso');
 
 const router = express.Router();
 
