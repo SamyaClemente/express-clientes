@@ -9,10 +9,15 @@ WORKDIR /app
 # Copia o conteúdo do diretório atual para o diretório de trabalho no contêiner
 COPY . /app
 
-# Limpa o cache do npm, remove a pasta node_modules e instala as dependências de produção
+# Instala as dependências de desenvolvimento, incluindo o nodemon
+RUN npm install --only=development
+
+# Limpa o cache do npm e remove a pasta node_modules
 RUN npm cache clean --force \
-    && rm -rf node_modules \
-    && npm install --only=production
+    && rm -rf node_modules
+
+# Instala as dependências de produção
+RUN npm install --only=production
 
 # Expõe a porta 8080 do contêiner
 EXPOSE 8080
