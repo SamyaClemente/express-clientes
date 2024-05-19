@@ -4,7 +4,7 @@ Este é um projeto de gerenciamento de candidatos que permite o cadastro, atuali
 
 ## URL base da API
 
-As rotas da API estão disponíveis em: [https://express-clientes.onrender.com/api](https://express-clientes.onrender.com/api)
+As rotas da API estão disponíveis em: [https://express-clientes.onrender.com/api](https://express-clientes.onrender.com)
 
 ## Rotas
 
