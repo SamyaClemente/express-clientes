@@ -1,6 +1,6 @@
 # Projeto de Gerenciamento de Candidatos
 
-Este é um projeto de gerenciamento de candidatos que permite o cadastro, atualização, remoção e visualização de candidatos, experiências profissionais, educações e habilidades associadas. As rotas estão documentadas abaixo com exemplos de JSON de entrada.
+Este é um projeto de gerenciamento de candidatos que permite o cadastro, atualização, remoção e visualização de candidatos, experiências profissionais, educações e habilidades associadas. As rotas estão documentadas abaixo com exemplos de JSON de entrada..
 
 ## URL base da API
 
